@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+
+media_folder: static/images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
+    create: true
+    path: '{{category}}/{{title}}'
+    editor:
+      preview: false
+    fields:
+      - {
+          label: 'Category',
+          name: 'category',
+          widget: 'select',
+          options: ['javascript', 'typescript', 'project', 'etc'],
+        }
+      - { label: 'Title', name: 'title' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
