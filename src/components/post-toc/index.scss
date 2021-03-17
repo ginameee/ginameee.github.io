@@ -1,0 +1,52 @@
+@import '../../styles/variables.scss';
+
+@media (max-width: 1450px) {
+  .post-toc-container {
+    display: none;
+  }
+}
+
+.post-toc-container {
+  position: absolute;
+  left: 10%;
+  padding-top: 2.4375rem;
+}
+
+.post-toc-container.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.post-toc {
+  top: 0;
+  left: 0;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 15px;
+  border-left: 4px solid;
+  border-image: linear-gradient(180deg, $theme-color1, $theme-color2);
+  border-image-slice: 1;
+
+  h1 {
+    border-bottom: none;
+    font-size: 23px;
+    margin: 0;
+  }
+
+  ul {
+    padding-left: 7px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      width: 150px;
+      font-size: 15px;
+      font-weight: normal;
+      list-style: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

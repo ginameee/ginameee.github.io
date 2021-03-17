@@ -63,6 +63,21 @@ body.dark {
     }
   }
 
+  .post-toc {
+    li {
+      color: $light-white;
+      opacity: 0.6;
+    }
+
+    li:hover {
+      opacity: 0.8;
+    }
+
+    li.active {
+      opacity: 1;
+    }
+  }
+
   // post
   blockquote {
     border-left: 4px solid rgba(255, 255, 255, 0.822);

@@ -27,3 +27,18 @@ export function toFit(
     })
   }
 }
+
+export function throttle(cb, ms) {
+  let inThrottle = false
+
+  return () => {
+    if (!inThrottle) {
+      inThrottle = true
+      cb()
+
+      setTimeout(() => {
+        inThrottle = false
+      }, ms)
+    }
+  }
+}

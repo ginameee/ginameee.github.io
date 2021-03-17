@@ -17,6 +17,8 @@ import * as ScrollManager from '../utils/scroll'
 
 import '../styles/code.scss'
 import 'katex/dist/katex.min.css'
+import { PostToc } from '../components/post-toc'
+import { getMenus } from '../components/post-toc/service'
 
 export default ({ data, pageContext, location }) => {
   useEffect(() => {
@@ -32,6 +34,7 @@ export default ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={title}>
+      {getMenus(post).length > 0 && <PostToc postContext={post} />}
       <Head title={postTitle} description={post.excerpt} />
       <PostTitle title={postTitle} />
       <PostDate date={date} />
@@ -79,6 +82,11 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+      }
+      headings {
+        value
+        id
+        depth
       }
     }
   }
