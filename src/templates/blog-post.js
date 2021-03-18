@@ -19,6 +19,7 @@ import '../styles/code.scss'
 import 'katex/dist/katex.min.css'
 import { PostToc } from '../components/post-toc'
 import { getMenus } from '../components/post-toc/service'
+import { PostFarewell } from '../components/post-farewell'
 
 export default ({ data, pageContext, location }) => {
   useEffect(() => {
@@ -46,6 +47,8 @@ export default ({ data, pageContext, location }) => {
       <Elements.Hr />
       <Bio />
       <PostNavigator pageContext={pageContext} />
+      <PostFarewell />
+
       {!!disqusShortName && (
         <Disqus
           post={post}
