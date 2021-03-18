@@ -1,6 +1,6 @@
 module.exports = {
   title: `Study Log`,
-  description: `Blog posted about ...`,
+  description: `학습내용을 기록하는 공간입니다!`,
   author: `GINAMEEE`,
   introduction: `Jangchun Lee, Front-end Developer @Wemakeprice`,
   siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
