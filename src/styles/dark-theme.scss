@@ -45,6 +45,12 @@ body.dark {
   }
 
   .thumbnail {
+    .category {
+      color: white;
+    }
+    time {
+      color: $dark-link-color;
+    }
     h3 {
       color: $dark-light-font-color;
     }

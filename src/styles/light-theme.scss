@@ -44,6 +44,12 @@ body.light {
   }
 
   .thumbnail {
+    .category {
+      color: black;
+    }
+    time {
+      color: $light-link-color;
+    }
     h3 {
       color: $dark-gray;
     }
