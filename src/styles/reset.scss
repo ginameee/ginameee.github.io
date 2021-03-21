@@ -18,12 +18,23 @@ h6 {
 
 p {
   margin-bottom: 1.5rem;
+  word-break: keep-all;
+}
+
+* + p {
+  margin-top: 1.5rem;
 }
 
 strong {
   font-size: 17px;
   font-weight: 700;
   text-decoration: underline;
+}
+
+blockquote {
+  color: $blockquote-text-color;
+  padding: 10px;
+  font-size: 1.3rem;
 }
 
 small {
