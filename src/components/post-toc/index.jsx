@@ -53,7 +53,7 @@ export const PostToc = ({ postContext }) => {
           return curIdx
         })
       }
-    }, 30)
+    }, 10)
 
     window.addEventListener('scroll', scrollEventListener)
 
